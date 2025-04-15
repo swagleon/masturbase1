@@ -1,0 +1,279 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 198 93% 60%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 198 93% 60%;
+    --radius: 0.5rem;
+    --chart-1: 198 93% 60%;
+    --chart-2: 198 93% 60%;
+    --chart-3: 221.2 83.2% 53.3%;
+    --chart-4: 42.2 93.5% 53.5%;
+    --chart-5: 0 84.2% 60.2%;
+    --video-bg: 0 0% 0%;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 198 93% 60%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 198 93% 60%;
+    --chart-1: 198 93% 60%;
+    --chart-2: 198 93% 60%;
+    --chart-3: 221.2 83.2% 53.3%;
+    --chart-4: 42.2 93.5% 53.5%;
+    --chart-5: 0 84.2% 60.2%;
+    --video-bg: 0 0% 0%;
+  }
+
+  /* Beach Mode - Beachfarben mit Marmoroptik */
+  [data-theme="beach"] {
+    --background: 36 100% 95%;
+    --foreground: 30 10% 20%;
+    --card: 40 30% 96%;
+    --card-foreground: 30 10% 20%;
+    --popover: 40 30% 96%;
+    --popover-foreground: 30 10% 20%;
+    --primary: 200 80% 60%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 48 96% 89%;
+    --secondary-foreground: 30 10% 20%;
+    --muted: 36 10% 90%;
+    --muted-foreground: 30 10% 40%;
+    --accent: 25 70% 85%;
+    --accent-foreground: 30 10% 20%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 30 20% 80%;
+    --input: 30 20% 80%;
+    --ring: 200 80% 60%;
+    --chart-1: 200 80% 60%;
+    --chart-2: 200 80% 60%;
+    --chart-3: 221.2 83.2% 53.3%;
+    --chart-4: 42.2 93.5% 53.5%;
+    --chart-5: 0 84.2% 60.2%;
+    --video-bg: 30 80% 95%;
+  }
+
+  /* Matrix Mode */
+  .matrix-mode {
+    --background: 120 100% 5%;
+    --foreground: 120 100% 50%;
+    --card: 120 100% 5%;
+    --card-foreground: 120 100% 50%;
+    --popover: 120 100% 5%;
+    --popover-foreground: 120 100% 50%;
+    --primary: 120 100% 50%;
+    --primary-foreground: 120 100% 5%;
+    --secondary: 120 100% 10%;
+    --secondary-foreground: 120 100% 50%;
+    --muted: 120 100% 10%;
+    --muted-foreground: 120 100% 40%;
+    --accent: 120 100% 10%;
+    --accent-foreground: 120 100% 50%;
+    --destructive: 0 100% 30%;
+    --destructive-foreground: 120 100% 50%;
+    --border: 120 100% 20%;
+    --input: 120 100% 10%;
+    --ring: 120 100% 50%;
+    --video-bg: 120 100% 5%;
+  }
+
+  .matrix-mode * {
+    font-family: monospace !important;
+    text-shadow: 0 0 5px #0f0, 0 0 10px #0f0;
+    transition: all 0.1s ease;
+  }
+
+  .matrix-mode button:hover,
+  .matrix-mode a:hover {
+    text-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 30px #0f0;
+  }
+
+  /* Rainbow Mode */
+  .rainbow-mode {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+    --primary: 0 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 120 100% 50%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 240 100% 50%;
+    --muted-foreground: 0 0% 100%;
+    --accent: 60 100% 50%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 300 100% 50%;
+    --input: 180 100% 50%;
+    --ring: 0 100% 50%;
+    --video-bg: 0 0% 100%;
+  }
+
+  .rainbow-mode * {
+    transition: all 0.3s ease;
+  }
+
+  .rainbow-mode h1,
+  .rainbow-mode h2,
+  .rainbow-mode h3 {
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow-text 5s linear infinite;
+  }
+
+  .rainbow-mode button,
+  .rainbow-mode .btn {
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    border: none;
+    animation: rainbow-bg 5s linear infinite;
+  }
+
+  .rainbow-mode button:hover,
+  .rainbow-mode .btn:hover {
+    filter: brightness(1.2) saturate(1.5);
+  }
+
+  .rainbow-mode input,
+  .rainbow-mode textarea,
+  .rainbow-mode select {
+    border-color: transparent;
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    animation: rainbow-border 5s linear infinite;
+  }
+
+  /* Video-Hintergrund für alle Modi */
+  .video-container {
+    background-color: hsl(var(--video-bg));
+  }
+
+  .rainbow-mode .video-container {
+    background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+    animation: rainbow-bg 10s linear infinite;
+  }
+
+  .matrix-mode .video-container {
+    background-color: #000;
+    background-image: radial-gradient(rgba(0, 255, 0, 0.1) 2px, transparent 2px),
+      radial-gradient(rgba(0, 255, 0, 0.15) 1px, transparent 1px);
+    background-size: 50px 50px, 30px 30px;
+    background-position: 0 0, 25px 25px;
+  }
+
+  [data-theme="beach"] .video-container {
+    background-image: linear-gradient(to right, rgba(255, 248, 231, 0.8), rgba(255, 245, 225, 0.8)),
+      url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='rgba(232, 214, 179, .3)' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+  }
+
+  @keyframes rainbow-text {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+
+  @keyframes rainbow-bg {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+
+  @keyframes rainbow-border {
+    0% {
+      border-color: red;
+    }
+    16.6% {
+      border-color: orange;
+    }
+    33.3% {
+      border-color: yellow;
+    }
+    50% {
+      border-color: green;
+    }
+    66.6% {
+      border-color: blue;
+    }
+    83.3% {
+      border-color: indigo;
+    }
+    100% {
+      border-color: violet;
+    }
+  }
+
+  /* Beach Marble Effect */
+  [data-theme="beach"] body {
+    background-image: linear-gradient(to right, rgba(255, 248, 231, 0.8), rgba(255, 245, 225, 0.8)),
+      url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='rgba(232, 214, 179, .3)' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+  }
+
+  [data-theme="beach"] .card,
+  [data-theme="beach"] .input,
+  [data-theme="beach"] .select,
+  [data-theme="beach"] .button {
+    background-image: linear-gradient(to right, rgba(255, 250, 240, 0.9), rgba(255, 245, 235, 0.9)),
+      url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='rgba(232, 214, 179, .3)' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.font-script {
+  font-family: var(--font-dancing-script), cursive;
+}
+
